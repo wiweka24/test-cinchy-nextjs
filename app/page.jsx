@@ -109,7 +109,7 @@ export default function Home() {
             <p className="text-[16px] md:text-lg">
               Flight - confirmed! Hotel - sorted! And now, it's time to embark
               on your Bali Scooter Rental adventure! If you're still uncertain
-              about your next steps, don’t worry, as we're here to address all
+              about your next steps, don't worry, as we're here to address all
               your queries and concerns.
             </p>
           </div>
