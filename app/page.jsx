@@ -81,6 +81,11 @@ export default function Home() {
       );
       setCurrentFaq(currentFaq);
     }
+
+    // if the window width is less than 1024, close the dropdown
+    if (window.innerWidth < 1024) {
+      setOpenTopic(false);
+    }
   }
 
   function openPickFaq(topic) {
@@ -146,7 +151,6 @@ export default function Home() {
                   <button
                     onClick={() => {
                       filterByTopic(faq, item);
-                      setOpenTopic(false);
                     }}
                     className="py-2 md:my-0 flex w-full font-title text-base justify-between items-center md:h-14 rounded-r-[10px] hover:bg-gray-100 focus:bg-gray-100 "
                   >
