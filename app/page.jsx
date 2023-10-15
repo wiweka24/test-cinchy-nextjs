@@ -17,18 +17,11 @@ export default function Home() {
   const [topic, setTopic] = useState([]);
   const [currentTopic, setCurrentTopic] = useState({ topic: "All", total: 6 });
   const [openFaq, setOpenFaq] = useState("");
-  const [openTopic, setOpenTopic] = useState(window.innerWidth >= 1024);
+  const [openTopic, setOpenTopic] = useState();
 
   useEffect(() => {
     // Check the window.innerWidth
     setOpenTopic(window.innerWidth >= 1024);
-    const handleResize = () => {
-      setOpenTopic(window.innerWidth >= 1024);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   // get faq
@@ -40,7 +33,7 @@ export default function Home() {
           setCurrentFaq(res.data);
         });
       } catch (err) {
-        // setFaq(false);
+        console.log(err);
       }
     })();
   }, []);
