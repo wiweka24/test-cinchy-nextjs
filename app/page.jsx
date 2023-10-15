@@ -107,10 +107,10 @@ export default function Home() {
           <div className="text-white font-title z-20 m-12 md:ml-48 max-w-[400px] space-y-2 md:space-y-7">
             <h1 className="text-[32px] md:text-5xl">Get Started</h1>
             <p className="text-[16px] md:text-lg">
-              Flight - confirmed! Hotel - sorted! And now, it's time to embark
-              on your Bali Scooter Rental adventure! If you're still uncertain
-              about your next steps, don't worry, as we're here to address all
-              your queries and concerns.
+              Flight - confirmed! Hotel - sorted! And now, it&apos;s time to
+              embark on your Bali Scooter Rental adventure! If you&apos;re still
+              uncertain about your next steps, don&apos;t worry, as we&apos;re
+              here to address all your queries and concerns.
             </p>
           </div>
         </div>
@@ -119,7 +119,6 @@ export default function Home() {
       {/* FAQ Content*/}
       <div className="lg:mt-12 mt-6 z-50 pb-48 px-4 lg:px-0 mx-auto max-w-[1236px] flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-[312px] flex flex-col px-6 py-4 md:py-6 rounded-[20px] bg-white divide-darkgreen-dark h-max">
-
           {/* dropdown on mobile */}
           <div className="flex justify-between lg:hidden">
             <div className="font-semibold">
