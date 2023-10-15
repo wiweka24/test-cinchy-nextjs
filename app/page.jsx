@@ -19,6 +19,18 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState("");
   const [openTopic, setOpenTopic] = useState(window.innerWidth >= 1024);
 
+  useEffect(() => {
+    // Check the window.innerWidth
+    setOpenTopic(window.innerWidth >= 1024);
+    const handleResize = () => {
+      setOpenTopic(window.innerWidth >= 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   // get faq
   useEffect(() => {
     (async () => {
