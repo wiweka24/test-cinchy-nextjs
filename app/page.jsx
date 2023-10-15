@@ -17,7 +17,7 @@ export default function Home() {
   const [topic, setTopic] = useState([]);
   const [currentTopic, setCurrentTopic] = useState({ topic: "All", total: 6 });
   const [openFaq, setOpenFaq] = useState("");
-  const [openTopic, setOpenTopic] = useState(window.innerWidth >= 768);
+  const [openTopic, setOpenTopic] = useState(window.innerWidth >= 1024);
 
   // get faq
   useEffect(() => {
@@ -87,7 +87,7 @@ export default function Home() {
   }
 
   return (
-    <main className="font-base bg-bg text-darkgreen">
+    <main className="font-base bg-bg text-darkgreen relative">
       {/* Navigation Bar */}
       <Navbar />
 
@@ -117,11 +117,11 @@ export default function Home() {
       </div>
 
       {/* FAQ Content*/}
-      <div className=" md:mt-12 -mt-6 z-50 pb-48 px-4 md:px-0 mx-auto max-w-[1236px] flex flex-col md:flex-row justify-between">
-        <div className="w-full md:w-[312px] flex flex-col px-6 py-4 md:py-6 rounded-[20px] bg-white divide-darkgreen-dark h-max">
+      <div className="lg:mt-12 mt-6 z-50 pb-48 px-4 lg:px-0 mx-auto max-w-[1236px] flex flex-col lg:flex-row justify-between">
+        <div className="w-full lg:w-[312px] flex flex-col px-6 py-4 md:py-6 rounded-[20px] bg-white divide-darkgreen-dark h-max">
 
           {/* dropdown on mobile */}
-          <div className="flex justify-between md:hidden">
+          <div className="flex justify-between lg:hidden">
             <div className="font-semibold">
               {currentTopic.topic} ({currentTopic.total})
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
 
           {/* button on desktop and use for dropdown item in mobile */}
           {openTopic ? (
-            <div className="mt-4 md:mt-0">
+            <div className="mt-4 lg:mt-0">
               {topic.map((item, index) => (
                 <div key={index}>
                   <button
@@ -157,14 +157,14 @@ export default function Home() {
 
         {/* FAQ List */}
         <div className="max-w-[824px]">
-          <h1 className="hidden md:inline font-title text-[28px] md:text-[38px] font-semibold">
+          <h1 className="hidden lg:inline font-title text-[28px] lg:text-[38px] font-semibold">
             {currentTopic.topic}
           </h1>
           <div className="mt-4 md:mt-[62px] flex flex-col gap-4">
             {currentFaq.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[20px] p-6 space-y-4 md:space-y-[34px]"
+                className="bg-white rounded-[20px] p-6 space-y-4 lg:space-y-[34px]"
               >
                 <div className="flex justify-between items-center">
                   <h1 className="font-title text-[38px]">{item.title}</h1>

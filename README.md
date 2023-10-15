@@ -2,13 +2,23 @@
 
 ## Getting Started
 
-First, install all the dependecies by:
+First, clone this repository using SSH:
+
+```bash
+git clone git@github.com:wiweka24/test-cinchy-nextjs.git
+```
+or using HTTP :
+```bash
+git clone https://github.com/wiweka24/test-cinchy-nextjs.git
+```
+
+Second, install all the dependecies by:
 
 ```bash
 npm install
 ```
 
-Second, run the development server:
+Third, run the development server:
 
 ```bash
 npm run dev
